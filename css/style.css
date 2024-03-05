@@ -1,0 +1,361 @@
+.dark{
+    background-color: rgb(61, 61, 165);
+}
+
+.green{
+    background-color: rgb(36, 138, 36);
+}
+
+.blue{
+    background-color: aquamarine;
+}
+
+.laufey{
+    background-color: bisque;
+}
+
+.gradient{
+    background: rgb(52,89,251);
+background: linear-gradient(3deg, rgba(52,89,251,1) 0%, rgba(251,105,150,1) 100%);
+}
+
+.bea{
+    background-color: blanchedalmond;
+}
+
+.faye{
+    background: rgb(52,89,251);
+background: linear-gradient(3deg, rgba(52,89,251,1) 0%, rgba(6,7,65,1) 100%);
+}
+
+.pink{
+    background-color: pink;
+}
+
+.share{
+    background-color: cornflowerblue;
+}
+
+.btn {
+    height: 4em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0px solid black;
+    cursor: pointer;
+  }
+  
+  .wrapper {
+    height: 2em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text {
+    font-size: 17px;
+    z-index: 1;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s ease;
+  }
+  
+  .flower {
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+  }
+  
+  .flower1 {
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+  }
+  
+  .flower2 {
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+  }
+  
+  .flower3 {
+    bottom: -15px;
+    transform: rotate(0deg);
+  }
+  
+  .flower4 {
+    top: -14px;
+    transform: rotate(15deg);
+  }
+  
+  .flower5 {
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+  }
+  
+  .flower6 {
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+  }
+  
+  .petal {
+    height: 1em;
+    width: 1em;
+    border-radius: 40% 70% / 7% 90%;
+    background: linear-gradient(#07a6d7, #93e0ee);
+    border: 0.5px solid #96d1ec;
+    z-index: 0;
+    transition: width 0.8s ease, height 0.8s ease;
+  }
+  
+  .two {
+    transform: rotate(90deg);
+  }
+  
+  .three {
+    transform: rotate(270deg);
+  }
+  
+  .four {
+    transform: rotate(180deg);
+  }
+  
+  .btn:hover .petal {
+    background: linear-gradient(#0761d7, #93bdee);
+    border: 0.5px solid #96b4ec;
+  }
+  
+  .btn:hover .flower {
+    grid-template-columns: 1.5em 1.5em;
+  }
+  
+  .btn:hover .flower .petal {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  .btn:hover .text {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .btn:hover div.flower1 {
+    animation: 15s linear 0s normal none infinite running flower1;
+  }
+  
+  @keyframes flower1 {
+    0% {
+      transform: rotate(5deg);
+    }
+  
+    100% {
+      transform: rotate(365deg);
+    }
+  }
+  
+  .btn:hover div.flower2 {
+    animation: 13s linear 1s normal none infinite running flower2;
+  }
+  
+  @keyframes flower2 {
+    0% {
+      transform: rotate(35deg);
+    }
+  
+    100% {
+      transform: rotate(-325deg);
+    }
+  }
+  
+  .btn:hover div.flower3 {
+    animation: 16s linear 1s normal none infinite running flower3;
+  }
+  
+  @keyframes flower3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .btn:hover div.flower4 {
+    animation: 17s linear 1s normal none infinite running flower4;
+  }
+  
+  @keyframes flower4 {
+    0% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(375deg);
+    }
+  }
+  
+  .btn:hover div.flower5 {
+    animation: 20s linear 1s normal none infinite running flower5;
+  }
+  
+  @keyframes flower5 {
+    0% {
+      transform: rotate(25deg);
+    }
+  
+    100% {
+      transform: rotate(-335deg);
+    }
+  }
+  
+  .btn:hover div.flower6 {
+    animation: 15s linear 1s normal none infinite running flower6;
+  }
+  
+  @keyframes flower6 {
+    0% {
+      transform: rotate(30deg);
+    }
+  
+    100% {
+      transform: rotate(390deg);
+    }
+  }
+  
+  button {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  button:hover span {
+    transform: translateX(5em);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
+  .Btn-1 {
+    position: relative;
+    width: 150px;
+    height: 55px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(151, 95, 255);
+    color: white;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(124, 54, 255) inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Btn-1::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+  .Btn-1::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+  .Btn-1:hover {
+    animation: jello-horizontal 0.9s both;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
